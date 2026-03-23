@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Управление Cookie</h2>
+<div class="alert alert-info">
+    {% if current_value %}
+        <p>Кука <strong>test_flask_cookie</strong> была установлена (значение: {{ current_value }}).<br>
+        При обновлении страницы она будет <strong>удалена</strong>.</p>
+    {% else %}
+        <p>Кука <strong>test_flask_cookie</strong> не была найдена.<br>
+        При обновлении страницы она будет <strong>установлена</strong>.</p>
+    {% endif %}
+</div>
+<a href="/cookies" class="btn btn-primary">Обновить страницу (Toggle)</a>
+{% endblock %}
